@@ -1,0 +1,26 @@
+[
+  {
+    "ContainingType": "shopping.basket.api.Controllers.v1.BasketController",
+    "Method": "Get",
+    "RelativePath": "api/Basket/{tenantId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tenantId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

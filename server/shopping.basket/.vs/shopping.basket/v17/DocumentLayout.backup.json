@@ -1,12 +1,173 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\controllers\\v1\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|solutionrelative:shopping.basket.api\\controllers\\v1\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\shopping.basket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|solutionrelative:shopping.basket.api\\shopping.basket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|solutionrelative:shopping.basket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFE3C985-9F70-4B73-85EE-3B1F9B26C354}|shopping.basket.core\\shopping.basket.core.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\iservicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFE3C985-9F70-4B73-85EE-3B1F9B26C354}|shopping.basket.core\\shopping.basket.core.csproj|solutionrelative:shopping.basket.core\\iservicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}|shopping.basket.data\\shopping.basket.data.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\factory\\imysqlclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}|shopping.basket.data\\shopping.basket.data.csproj|solutionrelative:shopping.basket.data\\factory\\imysqlclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}|shopping.basket.data\\shopping.basket.data.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\factory\\mysqlclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}|shopping.basket.data\\shopping.basket.data.csproj|solutionrelative:shopping.basket.data\\factory\\mysqlclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}|shopping.basket.data\\shopping.basket.data.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\repositories\\shoppingbasketcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}|shopping.basket.data\\shopping.basket.data.csproj|solutionrelative:shopping.basket.data\\repositories\\shoppingbasketcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B3C72557-BDCB-4966-9E34-45C94C19C9EB}|shopping.basket.api\\shopping.basket.api.csproj|solutionrelative:shopping.basket.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFE3C985-9F70-4B73-85EE-3B1F9B26C354}|shopping.basket.core\\shopping.basket.core.csproj|c:\\users\\danys\\documents\\repos\\git\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFE3C985-9F70-4B73-85EE-3B1F9B26C354}|shopping.basket.core\\shopping.basket.core.csproj|solutionrelative:shopping.basket.core\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 166,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BasketController.cs",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\Controllers\\v1\\BasketController.cs",
+              "RelativeDocumentMoniker": "shopping.basket.api\\Controllers\\v1\\BasketController.cs",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\Controllers\\v1\\BasketController.cs",
+              "RelativeToolTip": "shopping.basket.api\\Controllers\\v1\\BasketController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:55:01.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "shopping.basket.api",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\shopping.basket.api.csproj",
+              "RelativeDocumentMoniker": "shopping.basket.api\\shopping.basket.api.csproj",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\shopping.basket.api.csproj*",
+              "RelativeToolTip": "shopping.basket.api\\shopping.basket.api.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-13T20:52:56.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMySqlClientFactory.cs",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\Factory\\IMySqlClientFactory.cs",
+              "RelativeDocumentMoniker": "shopping.basket.data\\Factory\\IMySqlClientFactory.cs",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\Factory\\IMySqlClientFactory.cs",
+              "RelativeToolTip": "shopping.basket.data\\Factory\\IMySqlClientFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:45:31.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MySqlClientFactory.cs",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\Factory\\MySqlClientFactory.cs",
+              "RelativeDocumentMoniker": "shopping.basket.data\\Factory\\MySqlClientFactory.cs",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\Factory\\MySqlClientFactory.cs",
+              "RelativeToolTip": "shopping.basket.data\\Factory\\MySqlClientFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:45:13.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShoppingBasketContext.cs",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\Repositories\\ShoppingBasketContext.cs",
+              "RelativeDocumentMoniker": "shopping.basket.data\\Repositories\\ShoppingBasketContext.cs",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\Repositories\\ShoppingBasketContext.cs",
+              "RelativeToolTip": "shopping.basket.data\\Repositories\\ShoppingBasketContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:32:22.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IServiceCollectionExtension.cs",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\IServiceCollectionExtension.cs",
+              "RelativeDocumentMoniker": "shopping.basket.core\\IServiceCollectionExtension.cs",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\IServiceCollectionExtension.cs",
+              "RelativeToolTip": "shopping.basket.core\\IServiceCollectionExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:10:36.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\Program.cs",
+              "RelativeDocumentMoniker": "shopping.basket.api\\Program.cs",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\Program.cs",
+              "RelativeToolTip": "shopping.basket.api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T16:48:19.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\appsettings.json",
+              "RelativeDocumentMoniker": "shopping.basket.api\\appsettings.json",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.api\\appsettings.json",
+              "RelativeToolTip": "shopping.basket.api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-13T16:11:06.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\Constants.cs",
+              "RelativeDocumentMoniker": "shopping.basket.core\\Constants.cs",
+              "ToolTip": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\Constants.cs",
+              "RelativeToolTip": "shopping.basket.core\\Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:10:53.946Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35828.75 d17.13
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shopping.basket.api", "shopping.basket.api\shopping.basket.api.csproj", "{B3C72557-BDCB-4966-9E34-45C94C19C9EB}"
 EndProject
@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shopping.basket.data", "sho
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. api", "1. api", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. core", "2. core", "{B41615FC-AB7D-4BAD-B0A6-16C55C4640C3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. domain", "2. domain", "{B41615FC-AB7D-4BAD-B0A6-16C55C4640C3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. data", "3. data", "{15709D0D-FEC4-40A3-B011-971463DFCD7B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. infrastructure", "3. infrastructure", "{15709D0D-FEC4-40A3-B011-971463DFCD7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
