@@ -1,0 +1,16 @@
+docker-compose up -d at this file location
+
+Restart docker container and run following commands to get to the bash shell in the mysql container
+
+docker ps
+docker exec -it <mysql container name> /bin/bash 
+
+Inside the container, to connect to mysql command line type,
+
+mysql -u root -p
+
+Use MYSQL_ROOT_PASSWORD as specified in the docker-compose.yml . Execute following commands to create new user.
+
+create user 'user'@'%' identified by 'pass';
+grant all privileges on *.* to 'user'@'%' with grant option;
+flush privileges;
