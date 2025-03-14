@@ -24,14 +24,12 @@ C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.b
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\MySql.Data.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\MySqlConnector.dll
@@ -40,7 +38,6 @@ C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.b
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\danys\Documents\Repos\GIT\shopping-basket-application\server\shopping.basket\shopping.basket.api\bin\Debug\net8.0\System.Security.Permissions.dll

@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\shopping.basket.core\shopping.basket.core.csproj" />
-    <ProjectReference Include="..\shopping.basket.data\shopping.basket.data.csproj" />
   </ItemGroup>
 
 </Project>

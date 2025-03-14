@@ -1,14 +1,14 @@
 [
   {
     "ContainingType": "shopping.basket.api.Controllers.v1.BasketController",
-    "Method": "Get",
-    "RelativePath": "api/Basket/{tenantId}",
+    "Method": "GetCustomerByEmail",
+    "RelativePath": "api/Basket/{email}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "tenantId",
+        "Name": "email",
         "Type": "System.String",
         "IsRequired": true
       }

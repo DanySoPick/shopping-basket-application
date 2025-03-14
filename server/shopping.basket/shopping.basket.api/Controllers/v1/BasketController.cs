@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using shopping.basket.core.Domain.ShoppingBasket;
 
 namespace shopping.basket.api.Controllers.v1
 {
@@ -8,18 +9,29 @@ namespace shopping.basket.api.Controllers.v1
     [Produces("application/json")]
     public class BasketController : ControllerBase
     {
+        private readonly IShoppingBasketService _shoppingBasketService;
+
+        public BasketController(IShoppingBasketService shoppingBasketService)
+        {
+            _shoppingBasketService = shoppingBasketService;
+        }
+
         /// <summary>
-        /// Return audiences by tenant Id
+        /// Return customer by email
         /// </summary>
-        /// <param name="tenantId"></param>
+        /// <param name="email"></param>
         /// <returns></returns>
-        [HttpGet("{tenantId}")]
-        public async Task<ActionResult<string>> Get(string tenantId)
+        [HttpGet("{email}")]
+        public async Task<ActionResult<string>> GetCustomerByEmail(string email)
         {
             try
             {
-                
-                return Ok(tenantId);
+                if (string.IsNullOrEmpty(email))
+                {
+                    return BadRequest("Email is required");
+                }
+
+                return Ok(await _shoppingBasketService.GetCustomerByEmail(email));
             }
             catch (Exception ex)
             {

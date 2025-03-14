@@ -34,9 +34,6 @@
             "projectReferences": {
               "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\shopping.basket.core.csproj": {
                 "projectPath": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.core\\shopping.basket.core.csproj"
-              },
-              "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\shopping.basket.data.csproj": {
-                "projectPath": "C:\\Users\\danys\\Documents\\Repos\\GIT\\shopping-basket-application\\server\\shopping.basket\\shopping.basket.data\\shopping.basket.data.csproj"
               }
             }
           }
@@ -203,10 +200,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.0.3, )"
-            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.2.0, )"

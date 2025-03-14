@@ -5,14 +5,14 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Basket/{tenantId}": {
+    "/api/Basket/{email}": {
       "get": {
         "tags": [
           "Basket"
         ],
         "parameters": [
           {
-            "name": "tenantId",
+            "name": "email",
             "in": "path",
             "required": true,
             "schema": {

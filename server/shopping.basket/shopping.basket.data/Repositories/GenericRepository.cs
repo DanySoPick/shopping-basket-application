@@ -1,13 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using shopping.basket.data.Models;
 using System.Reflection;
+using System.Reflection.Metadata;
+using System.Xml.Linq;
 
 namespace shopping.basket.data.Repositories
 {
-    public class ShoppingBasketContext : DbContext
+    public class GenericRepository : DbContext, IGenericRepository
     {
         private readonly IConfiguration _configuration;
 
-        public ShoppingBasketContext(DbContextOptions<ShoppingBasketContext> options, IConfiguration configuration)
+        public GenericRepository(DbContextOptions<GenericRepository> options, IConfiguration configuration)
             : base(options)
         {
             _configuration = configuration;

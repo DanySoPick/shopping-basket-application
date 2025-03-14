@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("shopping.basket.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0129d70b8c67254455fe4a9186ea91ae565bdb1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48964e9c04898069a5cca1f9c6298aaacd018a30")]
 [assembly: System.Reflection.AssemblyProductAttribute("shopping.basket.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("shopping.basket.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
