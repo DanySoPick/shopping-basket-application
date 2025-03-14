@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+    db:
+        image: mysql/mysql-server:latest
+        container_name: local-mysql
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: localdevDB
+          MYSQL_USER: user
+          MYSQL_PASSWORD: myUserPassword
+        ports:
+            - '3306:3306'
+        volumes:
+          - mysql-data:/var/lib/mysql
+    cache:
+        image: redis:latest
+        container_name: local-redis
+        restart: always
+        ports:
+            - '6379:6379'
+        command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+        volumes: 
+            - cache:/data
+volumes:
+    mysql-data:
+        driver: local
+    cache:
+        driver: local

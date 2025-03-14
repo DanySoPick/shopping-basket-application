@@ -1,0 +1,26 @@
+[
+  {
+    "ContainingType": "shopping.basket.api.Controllers.v1.BasketController",
+    "Method": "GetCustomerByEmail",
+    "RelativePath": "api/Basket/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
