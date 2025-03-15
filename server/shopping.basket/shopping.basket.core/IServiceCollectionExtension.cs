@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using shopping.basket.core.Domain.ShoppingBasket;
-using shopping.basket.core.Domain.ShoppingBasket.Repository;
+using shopping.basket.core.Domain.ShoppingBasket.Repository.Customer;
+using shopping.basket.core.Domain.ShoppingBasket.Repository.Customers;
+using shopping.basket.core.Domain.ShoppingBasket.Repository.Products;
 using shopping.basket.core.Domain.ShoppingBasket.Service;
-using shopping.basket.data.Models;
 using shopping.basket.data.Repositories;
-using shopping.basket.ShoppingBasket.Models;
 
 namespace shopping.basket.core
 {
@@ -20,8 +19,9 @@ namespace shopping.basket.core
                 new MySqlServerVersion(new Version(8, 0, 31))));
 
             services.TryAddScoped<ICustomerRepository, CustomerRepository>();
+            services.TryAddScoped<IProductRepository, ProductRepository>();
 
-            services.TryAddScoped<IShoppingBasketService, ShoppingBasketService>();
+            services.TryAddScoped<IBasketService, BasketService>();
             services.AddHttpContextAccessor();
 
             return services;

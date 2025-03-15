@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace shopping.basket.ShoppingBasket.Models
+namespace shopping.basket.core.Domain.ShoppingBasket.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
         [Required]
         [MaxLength(100)]

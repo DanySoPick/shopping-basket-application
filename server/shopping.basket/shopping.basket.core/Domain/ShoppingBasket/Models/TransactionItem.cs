@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace shopping.basket.ShoppingBasket.Models
+namespace shopping.basket.core.Domain.ShoppingBasket.Models
 {
     public class TransactionItem
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using shopping.basket.core.Domain.ShoppingBasket;
+using shopping.basket.core.Domain.ShoppingBasket.Service;
 
 namespace shopping.basket.api.Controllers.v1
 {
@@ -9,9 +9,9 @@ namespace shopping.basket.api.Controllers.v1
     [Produces("application/json")]
     public class BasketController : ControllerBase
     {
-        private readonly IShoppingBasketService _shoppingBasketService;
+        private readonly IBasketService _shoppingBasketService;
 
-        public BasketController(IShoppingBasketService shoppingBasketService)
+        public BasketController(IBasketService shoppingBasketService)
         {
             _shoppingBasketService = shoppingBasketService;
         }
@@ -22,7 +22,7 @@ namespace shopping.basket.api.Controllers.v1
         /// <param name="email"></param>
         /// <returns></returns>
         [HttpGet("{email}")]
-        public async Task<ActionResult<string>> GetCustomerByEmail(string email)
+        public async Task<ActionResult<string>> GetCustomerByEmailAsync(string email)
         {
             try
             {
@@ -30,12 +30,39 @@ namespace shopping.basket.api.Controllers.v1
                 {
                     return BadRequest("Email is required");
                 }
+                var customer = await _shoppingBasketService.GetCustomerByEmailAsync(email);
 
-                return Ok(await _shoppingBasketService.GetCustomerByEmail(email));
+                if (customer == null)
+                    return NotFound($"Customer with email {email} not found.");
+
+                return Ok(customer);
             }
             catch (Exception ex)
             {
-                throw new Exception($"An error occurred while geting the subscription: {ex.Message}");
+
+                return StatusCode(500, "An unexpected error occurred. Please try again later.");
+            }
+        }
+
+        /// <summary>
+        /// Return all store products
+        /// </summary>
+        /// <returns>products</returns>
+        [HttpGet("/products")]
+        public async Task<ActionResult<string>> GetProductsAsync()
+        {
+            try
+            {
+                var products = await _shoppingBasketService.GetProductsAsync();
+
+                if(products == null)
+                    return NotFound($"Products not found.");
+
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An unexpected error occurred. Please try again later.");
             }
         }
     }

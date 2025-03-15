@@ -14,4 +14,6 @@
     <ProjectReference Include="..\shopping.basket.core\shopping.basket.core.csproj" />
   </ItemGroup>
 
+  <Import Project="..\shopping.basket.shared\shopping.basket.shared.projitems" Label="Shared" />
+
 </Project>
