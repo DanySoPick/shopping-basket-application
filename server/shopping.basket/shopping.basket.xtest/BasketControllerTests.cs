@@ -5,11 +5,6 @@ using shopping.basket.api.Controllers.v1;
 using shopping.basket.api.DTO;
 using shopping.basket.core.Domain.ShoppingBasket.Models;
 using shopping.basket.core.Domain.ShoppingBasket.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace shopping.basket.xtest
 {
