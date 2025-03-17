@@ -8,5 +8,8 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Service
 
         //query is sent to the database only when needed, improving efficiency
         Task<IEnumerable<Product>> GetProductsAsync();
+
+        Task<Transaction> InsertTransaction(int customerId, IEnumerable<TransactionItem> transactionItems, IEnumerable<TransactionDiscount> transactionDiscounts);
+
     }
 }

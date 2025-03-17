@@ -166,3 +166,23 @@ a.secondary {
     filter: invert();
   }
 }
+
+.container{
+  margin: 25px;
+}
+.table {
+  margin: 25px 50px;
+  font-family: sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.table tr {
+  border-bottom: 1px solid #ccc;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 8px 10px;
+  color: black;
+}

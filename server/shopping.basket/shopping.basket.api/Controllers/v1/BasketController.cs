@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Crypto;
+using shopping.basket.api.DTO;
+using shopping.basket.core.Domain.ShoppingBasket.Models;
 using shopping.basket.core.Domain.ShoppingBasket.Service;
 
 namespace shopping.basket.api.Controllers.v1
@@ -10,10 +14,12 @@ namespace shopping.basket.api.Controllers.v1
     public class BasketController : ControllerBase
     {
         private readonly IBasketService _shoppingBasketService;
+        private readonly IMapper _mapper;
 
-        public BasketController(IBasketService shoppingBasketService)
+        public BasketController(IBasketService shoppingBasketService, IMapper mapper)
         {
             _shoppingBasketService = shoppingBasketService;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -49,7 +55,7 @@ namespace shopping.basket.api.Controllers.v1
         /// </summary>
         /// <returns>products</returns>
         [HttpGet("/products")]
-        public async Task<ActionResult<string>> GetProductsAsync()
+        public async Task<ActionResult<Product>> GetProductsAsync()
         {
             try
             {
@@ -59,6 +65,38 @@ namespace shopping.basket.api.Controllers.v1
                     return NotFound($"Products not found.");
 
                 return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An unexpected error occurred. Please try again later.");
+            }
+        }
+
+        /// <summary>
+        /// Insert a transaction
+        /// </summary>
+        /// <returns>products</returns>
+        [HttpPut("/transaction")]
+        public async Task<ActionResult<Transaction>> NewTransactionAsync(BasketDTO basketPurchase)
+        {
+            try
+            {
+                if (basketPurchase == null)
+                {
+                    return BadRequest("Basket purchase is required");
+                }
+
+                var Items = _mapper.Map<IEnumerable<TransactionItem>>(basketPurchase.Items);
+                var Discounts = _mapper.Map<IEnumerable<TransactionDiscount>>(basketPurchase.Discounts);
+
+                var transaction = await _shoppingBasketService.InsertTransaction(basketPurchase.CustomerId, Items, Discounts);
+
+                if (transaction == null)
+                    return NotFound($"Products not found.");
+
+                var transactionSimplefied = _mapper.Map<TransactionDTO>(transaction);
+
+                return Ok(transactionSimplefied);
             }
             catch (Exception ex)
             {

@@ -3,12 +3,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace shopping.basket.core.Domain.ShoppingBasket.Models
 {
-    public class TransactionItem
+    [Table("Transaction_Items")]
+    public class TransactionItem : BaseEntity
     {
         [Required]
+        [Column("transaction_id")]
         public int TransactionId { get; set; }
 
         [Required]
+        [Column("product_id")]
         public int ProductId { get; set; }
 
         [Required]
@@ -17,6 +20,7 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Models
         [Required]
         public decimal Price { get; set; }
 
+        [Column("total_price")]
         public decimal TotalPrice => Quantity * Price; // Computed property
 
         [ForeignKey("TransactionId")]

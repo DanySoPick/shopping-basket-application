@@ -3,15 +3,19 @@ using System.ComponentModel.DataAnnotations;
 
 namespace shopping.basket.core.Domain.ShoppingBasket.Models
 {
-    public class TransactionDiscount
+    [Table("Transaction_Discounts")]
+    public class TransactionDiscount : BaseEntity
     {
         [Required]
+        [Column("transaction_id")]
         public int TransactionId { get; set; }
 
         [Required]
+        [Column("discount_id")]
         public int DiscountId { get; set; }
 
         [Required]
+        [Column("discount_applied")]
         public decimal DiscountApplied { get; set; }
 
         [ForeignKey("TransactionId")]

@@ -1,3 +1,4 @@
+using shopping.basket.api.Profiler;
 using shopping.basket.core;
 using shopping.basket.shared.Cors;
 
@@ -35,6 +36,8 @@ builder.Services.AddCors(options =>
       });
 });
 #endregion
+
+builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 //builder.Services.AddDatabase(builder.Configuration.GetConnectionString("DefaultConnection"));
 
