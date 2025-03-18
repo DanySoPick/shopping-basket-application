@@ -7,6 +7,7 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Repository.Products
     public class ProductRepository : GenericRepository, IProductRepository
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
 
         public ProductRepository(DbContextOptions<GenericRepository> options, IConfiguration configuration)
             : base(options, configuration)
@@ -36,6 +37,11 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Repository.Products
         public async Task<Product> UpdateProductAsync(Product product)
         {
             throw new NotImplementedException("UpdateProductAsync method is not implemented yet.");
+        }
+
+        public async Task<IEnumerable<Discount>> GetAvailableDiscountsAsync(DateTime date)
+        {
+            return await Discounts.Where(d => d.StartDate <= date && d.EndDate >= date).ToListAsync();
         }
 
     }

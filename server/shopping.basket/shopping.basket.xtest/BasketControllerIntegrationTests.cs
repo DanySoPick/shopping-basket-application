@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Testing;
+﻿using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using shopping.basket.api.DTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace shopping.basket.xtest
 {
@@ -66,9 +61,9 @@ namespace shopping.basket.xtest
                 {
                     new SelectedItemsDTO { ProductId = 1, Quantity = 2 }
                 },
-                Discounts = new List<currentDiscountDTO>
+                Discounts = new List<SelectedDiscountDTO>
                 {
-                    new currentDiscountDTO { DiscountId = 1 }
+                    new SelectedDiscountDTO { DiscountId = 1 }
                 }
             };
 

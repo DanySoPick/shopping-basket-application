@@ -12,5 +12,7 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Repository.Products
         Task<Product> InsertNewProductAsync(Product product);
 
         Task<Product> UpdateProductAsync(Product product);
+
+        Task<IEnumerable<Discount>> GetAvailableDiscountsAsync(DateTime date);
     }
 }

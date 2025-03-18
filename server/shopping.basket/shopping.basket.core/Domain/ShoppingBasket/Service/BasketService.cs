@@ -100,5 +100,18 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Service
                 throw new Exception("An error occurred while inserting the transaction.", ex);
             }
         }
+
+       public async Task<IEnumerable<Discount>> GetAvailableDiscountsAsync(DateTime date)
+        {
+            try
+            {
+                return await _productRepository.GetAvailableDiscountsAsync(date);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

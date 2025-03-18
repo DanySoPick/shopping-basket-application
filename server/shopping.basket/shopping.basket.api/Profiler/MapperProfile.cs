@@ -14,8 +14,9 @@ namespace shopping.basket.api.Profiler
                 .ForMember(dest => dest.TransactionDiscounts, opt => opt.MapFrom(src => src.Discounts));
 
             CreateMap<SelectedItemsDTO, TransactionItem>();
-            CreateMap<currentDiscountDTO, TransactionDiscount>();
+            CreateMap<SelectedDiscountDTO, TransactionDiscount>();
             CreateMap<Transaction, TransactionDTO>();
+            CreateMap<Discount, DiscountDTO>();
         }
     }
 }

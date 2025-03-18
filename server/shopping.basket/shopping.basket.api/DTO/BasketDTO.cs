@@ -6,7 +6,7 @@ namespace shopping.basket.api.DTO
     {
         public int CustomerId { get; set; }
         public IEnumerable<SelectedItemsDTO> Items { get; set; }
-        public IEnumerable<currentDiscountDTO> Discounts { get; set; }
+        public IEnumerable<SelectedDiscountDTO> Discounts { get; set; }
     }
 
     public class SelectedItemsDTO
@@ -15,9 +15,20 @@ namespace shopping.basket.api.DTO
         public int Quantity { get; set; }
     }
 
-    public class currentDiscountDTO
+    public class SelectedDiscountDTO
     {
         public int DiscountId { get; set; }
+    }
+
+    public class DiscountDTO
+    {
+        public int Id { get; set; } //discount id
+        public int? ProductId { get; set; }
+        public string DiscountType { get; set; }
+        public decimal DiscountValue { get; set; }
+        public int? RequiredProductId { get; set; }
+        public int? RequiredQuantity { get; set; }
+
     }
 
     public class TransactionDTO

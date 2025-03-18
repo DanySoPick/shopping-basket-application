@@ -51,7 +51,7 @@ namespace shopping.basket.api.Controllers.v1
         }
 
         /// <summary>
-        /// Return all store products
+        /// Return all store products and discounts if existing
         /// </summary>
         /// <returns>products</returns>
         [HttpGet("/products")]
@@ -68,6 +68,32 @@ namespace shopping.basket.api.Controllers.v1
             }
             catch (Exception ex)
             {
+                return StatusCode(500, "An unexpected error occurred. Please try again later.");
+            }
+        }
+
+        /// <summary>
+        /// Get available discounts
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        [HttpGet("/discounts")]
+        public async Task<ActionResult<IEnumerable<DiscountDTO>>> GetAvailableDiscountsAsync()
+        {
+            try
+            {
+                var discounts = await _shoppingBasketService.GetAvailableDiscountsAsync(DateTime.Now);
+
+                var mapDiscounts = _mapper.Map<IEnumerable<DiscountDTO>>(discounts);
+                
+                if (mapDiscounts == null)
+                    return NotFound($"Customer with email {mapDiscounts} not found.");
+
+                return Ok(mapDiscounts);
+            }
+            catch (Exception ex)
+            {
+
                 return StatusCode(500, "An unexpected error occurred. Please try again later.");
             }
         }

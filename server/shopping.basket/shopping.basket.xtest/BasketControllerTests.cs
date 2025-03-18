@@ -24,7 +24,7 @@ namespace shopping.basket.xtest
                     .ForMember(dest => dest.TransactionItems, opt => opt.MapFrom(src => src.Items))
                     .ForMember(dest => dest.TransactionDiscounts, opt => opt.MapFrom(src => src.Discounts));
                 cfg.CreateMap<SelectedItemsDTO, TransactionItem>();
-                cfg.CreateMap<currentDiscountDTO, TransactionDiscount>();
+                cfg.CreateMap<SelectedDiscountDTO, TransactionDiscount>();
                 cfg.CreateMap<Transaction, TransactionDTO>();
             });
 
@@ -61,9 +61,9 @@ namespace shopping.basket.xtest
                 {
                     new SelectedItemsDTO { ProductId = 1, Quantity = 2 }
                 },
-                Discounts = new List<currentDiscountDTO>
+                Discounts = new List<SelectedDiscountDTO>
                 {
-                    new currentDiscountDTO { DiscountId = 1 }
+                    new SelectedDiscountDTO { DiscountId = 1 }
                 }
             };
 
