@@ -45,14 +45,7 @@ const Home = () => {
       const discounts = productBundle?.discounts || [];
 
       setProducts((prevProducts) => [...prevProducts, ...products]);
-
-      if (discounts.length > 0) {
-        const multiDiscount = discounts.filter(
-          (discount) => discount.discountType === "multi"
-        );
-        setMultiDiscount(multiDiscount);
         setDiscounts(discounts);
-      }
     };
 
     fetchCustomer();
@@ -130,11 +123,13 @@ const Home = () => {
           selectedProduct.id === currentDiscounts.requiredProductId
         ) {
           const requiredQuantity = currentDiscounts.requiredQuantity;
-    
+
           const offerProductId = currentDiscounts.productId;
           if (newQuantity >= requiredQuantity) {
-            const offerProduct = products.find((product) => product.id === offerProductId);
-    
+            const offerProduct = products.find(
+              (product) => product.id === offerProductId
+            );
+
             if (offerProduct) {
               // Check if the free offer product is already in the table
               const isOfferProductAdded = data.some(
@@ -148,15 +143,16 @@ const Home = () => {
                   quantaty: 1, // Free product quantity is 1
                   cost: 0, // Free product has no cost
                 };
-    
-              setData((prevData) => [...prevData, newRow]);
+
+                setData((prevData) => [...prevData, newRow]);
+              }
             }
-          }
-          }
-          else {
+          } else {
             // Remove the free offer product if the condition is no longer met
             setData((prevData) =>
-              prevData.filter((row) => row.productId !== offerProductId || row.cost !== 0)
+              prevData.filter(
+                (row) => row.productId !== offerProductId || row.cost !== 0
+              )
             );
           }
         }
@@ -295,6 +291,7 @@ const Home = () => {
       </div>
       {isChekout && (
         <CheckOut
+          products={products}
           selectedProducts={data}
           discounts={discounts}
           customer={customer}

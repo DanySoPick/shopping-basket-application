@@ -38,6 +38,7 @@ namespace shopping.basket.api.DTO
     public class DiscountDTO
     {
         public int Id { get; set; } //discount id
+        public string DiscountName { get; set; }
         public int? ProductId { get; set; }
         public string DiscountType { get; set; }
         public decimal DiscountValue { get; set; }

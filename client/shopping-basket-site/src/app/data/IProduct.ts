@@ -6,6 +6,7 @@ export interface IProduct {
 
   export interface IDiscount {
     id: number;
+    discountName: string;
     productId: number;
     discountType: string;
     discountValue: number;

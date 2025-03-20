@@ -62,13 +62,13 @@ VALUES
     -- 10% off Apples (valid for 1 week)
 INSERT INTO Discounts (discount_name, product_id, discount_type, discount_value, start_date, end_date) 
 VALUES ('Apple Discount', (SELECT id FROM Products WHERE name='Apples (per bag)'), 'PERCENTAGE', 10, 
-        '2025-03-10 00:00:00', '2025-03-17 23:59:59');
+        '2025-03-10 00:00:00', '2025-04-27 23:59:59');
 
 	-- Buy 2 Soup Tins, get Bread for half price (valid for 2 weeks)
 INSERT INTO Discounts (discount_name, product_id, discount_type, discount_value, required_product_id, required_quantity, start_date, end_date) 
 VALUES ('Soup & Bread Deal', (SELECT id FROM Products WHERE name='Bread'), 'MULTI_BUY', 00, 
         (SELECT id FROM Products WHERE name='Soup Tin'), 2, 
-        '2025-03-10 00:00:00', '2025-03-24 23:59:59');
+        '2025-03-10 00:00:00', '2025-04-27 23:59:59');
 		
 		
 CREATE PROCEDURE get_discounted_transactions (IN transactionId INT)
