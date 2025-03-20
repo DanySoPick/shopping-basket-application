@@ -11,6 +11,8 @@ builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 #endregion
 
+//Add service for Redis
+//Add service for jwt authentication
 
 builder.Services.AddCoreFeatures(builder.Configuration);
 

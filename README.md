@@ -1,4 +1,4 @@
-**Title: Shopping Basket Application**
+# Shopping Basket Application
 
 **Objective**: Develop a full-stack application to manage a shopping
 basket, calculate the total price of grocery

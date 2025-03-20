@@ -81,7 +81,6 @@ namespace shopping.basket.api.Controllers.v1
         /// <summary>
         /// Get available discounts
         /// </summary>
-        /// <param name="email"></param>
         /// <returns></returns>
         [HttpGet("/discounts")]
         public async Task<ActionResult<IEnumerable<DiscountDTO>>> GetAvailableDiscountsAsync()
@@ -144,7 +143,7 @@ namespace shopping.basket.api.Controllers.v1
         [HttpPost("/transaction/checkOut")]
         public async Task<ActionResult<TransactionSummaryDTO>> CalculateCheckOutAsync(BasketDTO basketPurchase)
         {
-            try
+            try // TODO: not finished
             {
                 if (basketPurchase == null)
                 {
