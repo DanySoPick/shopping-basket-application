@@ -13,5 +13,7 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Models
 
         [Required]
         public decimal Tax { get; set; }
+
+        // TODO: Add more properties as Stock, limit to buy, etc.
     }
 }

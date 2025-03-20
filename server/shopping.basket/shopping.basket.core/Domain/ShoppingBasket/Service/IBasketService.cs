@@ -12,5 +12,7 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Service
         Task<Transaction> InsertTransaction(int customerId, IEnumerable<TransactionItem> transactionItems, IEnumerable<TransactionDiscount> transactionDiscounts);
 
         Task<IEnumerable<Discount>> GetAvailableDiscountsAsync(DateTime date);
+
+        Task<IEnumerable<Transaction>> CalculateCheckOutAsync(IEnumerable<TransactionItem> transactionItems, IEnumerable<TransactionDiscount> transactionDiscounts);
     }
 }

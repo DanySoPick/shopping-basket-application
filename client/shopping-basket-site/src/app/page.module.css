@@ -171,7 +171,7 @@ a.secondary {
   margin: 25px;
 }
 .table {
-  margin: 25px 50px;
+  margin: 10px 50px;
   font-family: sans-serif;
   border-collapse: collapse;
   border: 1px solid #ccc;
@@ -185,4 +185,22 @@ a.secondary {
   text-align: left;
   padding: 8px 10px;
   color: black;
+}
+
+.addButton {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #0056b3;
+}
+
+.addButtonContainer {
+  margin: 30px 50px 10px;
 }

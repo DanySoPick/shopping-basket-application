@@ -16,6 +16,6 @@ namespace shopping.basket.core.Domain.ShoppingBasket.Models
         [Column("last_login")]
         public DateTime? LastLogin { get; set; }
 
-       // public ICollection<Transaction> Transactions { get; set; }
+        public ICollection<Transaction>? Transactions { get; set; }
     }
 }

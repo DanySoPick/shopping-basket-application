@@ -13,6 +13,7 @@ namespace shopping.basket.api.Profiler
                 .ForMember(dest => dest.TransactionItems, opt => opt.MapFrom(src => src.Items))
                 .ForMember(dest => dest.TransactionDiscounts, opt => opt.MapFrom(src => src.Discounts));
 
+            CreateMap<Product, ProductDTO>();
             CreateMap<SelectedItemsDTO, TransactionItem>();
             CreateMap<SelectedDiscountDTO, TransactionDiscount>();
             CreateMap<Transaction, TransactionDTO>();
