@@ -1,14 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace shopping.basket.ShoppingBasket.Models
+namespace shopping.basket.core.Domain.ShoppingBasket.Models
 {
-    public class Transaction
+    public class Transaction : BaseEntity
     {
 
         [Required]
+        [Column("customer_id")]
         public int CustomerId { get; set; }
 
+        [Column("transaction_date")]
         public DateTime TransactionDate { get; set; } = DateTime.UtcNow;
 
         [ForeignKey("CustomerId")]

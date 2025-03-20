@@ -166,3 +166,53 @@ a.secondary {
     filter: invert();
   }
 }
+
+.container{
+  margin: 25px;
+}
+.table {
+  margin: 10px 50px;
+  font-family: sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.table tr {
+  border-bottom: 1px solid #ccc;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 8px 10px;
+  color: black;
+}
+
+.addButton,
+.checkoutButton,
+.cancelButton {
+  margin: 15px 15px 15px 0;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addButton:hover,
+.cancelButton:hover {
+  background-color: #ccc;
+}
+
+.addButtonContainer {
+  margin: 30px 50px 10px;
+}
+
+.checkoutButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.checkoutButton:hover {
+  background-color: #218838;
+}

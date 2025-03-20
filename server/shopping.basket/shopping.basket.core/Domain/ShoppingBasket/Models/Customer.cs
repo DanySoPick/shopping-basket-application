@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace shopping.basket.ShoppingBasket.Models
+namespace shopping.basket.core.Domain.ShoppingBasket.Models
 {
     public class Customer : BaseEntity
     {
@@ -16,6 +16,6 @@ namespace shopping.basket.ShoppingBasket.Models
         [Column("last_login")]
         public DateTime? LastLogin { get; set; }
 
-       // public ICollection<Transaction> Transactions { get; set; }
+        public ICollection<Transaction>? Transactions { get; set; }
     }
 }

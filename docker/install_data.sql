@@ -48,7 +48,6 @@ CREATE TABLE Transaction_Discounts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     transaction_id INT NOT NULL,
     discount_id INT NOT NULL,
-    discount_applied DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (transaction_id) REFERENCES Transactions(id) ON DELETE CASCADE,
     FOREIGN KEY (discount_id) REFERENCES Discounts(id) ON DELETE CASCADE
 );
@@ -63,10 +62,31 @@ VALUES
     -- 10% off Apples (valid for 1 week)
 INSERT INTO Discounts (discount_name, product_id, discount_type, discount_value, start_date, end_date) 
 VALUES ('Apple Discount', (SELECT id FROM Products WHERE name='Apples (per bag)'), 'PERCENTAGE', 10, 
-        '2025-03-10 00:00:00', '2025-03-17 23:59:59');
+        '2025-03-10 00:00:00', '2025-04-27 23:59:59');
 
 	-- Buy 2 Soup Tins, get Bread for half price (valid for 2 weeks)
 INSERT INTO Discounts (discount_name, product_id, discount_type, discount_value, required_product_id, required_quantity, start_date, end_date) 
 VALUES ('Soup & Bread Deal', (SELECT id FROM Products WHERE name='Bread'), 'MULTI_BUY', 00, 
         (SELECT id FROM Products WHERE name='Soup Tin'), 2, 
-        '2025-03-10 00:00:00', '2025-03-24 23:59:59');
+        '2025-03-10 00:00:00', '2025-04-27 23:59:59');
+		
+		
+CREATE PROCEDURE get_discounted_transactions (IN transactionId INT)
+BEGIN
+    SELECT 
+        t.id AS transaction_id, 
+        t.transaction_date,
+        c.name AS customer, 
+        p.name AS product, 
+        ti.quantity, 
+        ti.price, 
+        (ti.price * ti.quantity) AS original_price,
+        COALESCE(td.discount_applied, 0) AS discount_applied, 
+        ((ti.price * ti.quantity) - COALESCE(td.discount_applied, 0)) AS final_price
+    FROM Transactions t
+    JOIN Customers c ON t.customer_id = c.id
+    JOIN Transaction_Items ti ON t.id = ti.transaction_id
+    JOIN Products p ON ti.product_id = p.id
+    LEFT JOIN Transaction_Discounts td ON t.id = td.transaction_id
+    WHERE t.id = transactionId;
+END

@@ -1,4 +1,6 @@
+using shopping.basket.api.Profiler;
 using shopping.basket.core;
+using shopping.basket.shared.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,36 @@ builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 #endregion
 
+//Add service for Redis
+//Add service for jwt authentication
+
 builder.Services.AddCoreFeatures(builder.Configuration);
+
+#region [ Cors ]
+var corsOptions = builder.Configuration.GetSection(CorsOptions.Section).Get<CorsOptions>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+      policy =>
+      {
+          policy
+      .AllowAnyHeader()
+      .AllowAnyMethod()
+      .AllowAnyOrigin();
+
+          if (corsOptions?.Origins is { Length: > 0 })
+          {
+              policy
+            .SetIsOriginAllowedToAllowWildcardSubdomains()
+            .WithOrigins(corsOptions.Origins);
+          }
+      });
+});
+#endregion
+
+builder.Services.AddAutoMapper(typeof(MapperProfile));
+
 //builder.Services.AddDatabase(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -26,6 +57,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 

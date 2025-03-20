@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\shopping.basket.core\shopping.basket.core.csproj" />
   </ItemGroup>
+
+  <Import Project="..\shopping.basket.shared\shopping.basket.shared.projitems" Label="Shared" />
 
 </Project>

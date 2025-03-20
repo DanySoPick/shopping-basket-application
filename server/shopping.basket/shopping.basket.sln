@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. domain", "2. domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. infrastructure", "3. infrastructure", "{15709D0D-FEC4-40A3-B011-971463DFCD7B}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "shopping.basket.shared", "shopping.basket.shared\shopping.basket.shared.shproj", "{465AC8DD-89F3-46A1-9F62-B64E8EF4865E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Test", "4. Test", "{EAA332C1-D948-4A23-B24B-2994031562F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shopping.basket.xtest", "shopping.basket.xtest\shopping.basket.xtest.csproj", "{0D0944EB-4461-471F-BBDE-4462C5B1A557}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,10 @@ Global
 		{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0944EB-4461-471F-BBDE-4462C5B1A557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0944EB-4461-471F-BBDE-4462C5B1A557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0944EB-4461-471F-BBDE-4462C5B1A557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0944EB-4461-471F-BBDE-4462C5B1A557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,8 +51,14 @@ Global
 		{B3C72557-BDCB-4966-9E34-45C94C19C9EB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{DFE3C985-9F70-4B73-85EE-3B1F9B26C354} = {B41615FC-AB7D-4BAD-B0A6-16C55C4640C3}
 		{A9EBC517-9782-46A8-9DBD-F2A66DA56CF9} = {15709D0D-FEC4-40A3-B011-971463DFCD7B}
+		{465AC8DD-89F3-46A1-9F62-B64E8EF4865E} = {B41615FC-AB7D-4BAD-B0A6-16C55C4640C3}
+		{0D0944EB-4461-471F-BBDE-4462C5B1A557} = {EAA332C1-D948-4A23-B24B-2994031562F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3EBCD8BF-3699-4E63-BB8F-3428122B569B}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		shopping.basket.shared\shopping.basket.shared.projitems*{465ac8dd-89f3-46a1-9f62-b64e8ef4865e}*SharedItemsImports = 13
+		shopping.basket.shared\shopping.basket.shared.projitems*{b3c72557-bdcb-4966-9e34-45c94c19c9eb}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
