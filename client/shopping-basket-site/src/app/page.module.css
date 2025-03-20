@@ -187,8 +187,9 @@ a.secondary {
   color: black;
 }
 
-.addButton {
-  margin-bottom: 15px;
+.addButton,
+.checkoutButton {
+  margin: 15px 15px 15px 0;
   padding: 10px 20px;
   background-color: #f2f2f2;
   color: black;
@@ -198,9 +199,18 @@ a.secondary {
 }
 
 .addButton:hover {
-  background-color: #0056b3;
+  background-color: #ccc;
 }
 
 .addButtonContainer {
   margin: 30px 50px 10px;
+}
+
+.checkoutButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.checkoutButton:hover {
+  background-color: #218838;
 }

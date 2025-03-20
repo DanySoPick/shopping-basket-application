@@ -195,6 +195,11 @@ const Home = () => {
     setData((prevData) => [...prevData, newRow]);
   };
 
+  const checkout = () => {
+    const totalCost = data.reduce((sum, row) => sum + row.cost, 0).toFixed(2);
+    alert(`Total cost: $${totalCost}`); //testing
+  };
+
   return (
     <>
       <div className={styles.container}>
@@ -202,6 +207,9 @@ const Home = () => {
         <div className={styles.addButtonContainer}>
           <button onClick={addRow} className={styles.addButton}>
             Add Row
+          </button>
+          <button onClick={checkout} className={styles.checkoutButton}>
+            Checkout
           </button>
         </div>
         <table className={styles.table}>
