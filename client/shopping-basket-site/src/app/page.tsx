@@ -10,16 +10,15 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { IBasket } from "./data/Ibasket";
-import { table } from "console";
+import CheckOut from "./checkOut";
 import { IDiscount, IProduct } from "./data/IProduct";
-
 
 const defaultData: IBasket[] = [
   {
     productId: 0,
     quantaty: 1,
     cost: 0,
-  }
+  },
 ];
 
 const Home = () => {
@@ -28,7 +27,9 @@ const Home = () => {
   const [products, setProducts] = useState<IProduct[] | []>([
     { id: 0, name: "No product", price: 0 },
   ]);
-  const [discount, setDiscount] = useState<IDiscount[] | []>([]);
+  const [discounts, setDiscounts] = useState<IDiscount[] | []>([]);
+  const [multiDiscount, setMultiDiscount] = useState<IDiscount[] | []>([]);
+  const [isChekout, setIsChekout] = useState(false);
 
   useEffect(() => {
     const fetchCustomer = async () => {
@@ -39,25 +40,30 @@ const Home = () => {
     const fetchProducts = async () => {
       const productBundle = await CustomerAPIService.getProducts();
 
-      console.log("productBundle", productBundle);
-      console.log("productBundle.products", productBundle?.products);
       // Ensure `product.values` is an array or fallback to an empty array
       const products = productBundle?.products || [];
       const discounts = productBundle?.discounts || [];
 
       setProducts((prevProducts) => [...prevProducts, ...products]);
-      setDiscount(discounts);
+
+      if (discounts.length > 0) {
+        const multiDiscount = discounts.filter(
+          (discount) => discount.discountType === "multi"
+        );
+        setMultiDiscount(multiDiscount);
+        setDiscounts(discounts);
+      }
     };
 
     fetchCustomer();
     fetchProducts();
   }, []);
-  
+
   type Option = {
     label: string;
     value: number | string;
   };
-  
+
   const columnHelper = createColumnHelper<IBasket>();
 
   const TableCell = ({
@@ -75,22 +81,24 @@ const Home = () => {
     const columnMeta = column.columnDef.meta;
     const tableMeta = table.options.meta;
     const [value, setValue] = useState(initialValue);
-  
+
     useEffect(() => {
       setValue(initialValue);
     }, [initialValue]);
-  
+
     const onBlur = () => {
       table.options.meta?.updateData(row.index, column.id, value);
     };
-  
+
     const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
       const selectedProductId = parseInt(e.target.value, 10);
       setValue(selectedProductId);
-  
+
       // Find the selected product
-      const selectedProduct = products.find((product) => product.id === selectedProductId);
-  
+      const selectedProduct = products.find(
+        (product) => product.id === selectedProductId
+      );
+
       if (selectedProduct) {
         // Update the productId and cost in the row
         tableMeta?.updateData(row.index, "productId", selectedProductId);
@@ -99,22 +107,64 @@ const Home = () => {
         tableMeta?.updateData(row.index, "cost", parseFloat(cost)); // do parsFloat becayse toFixed convert to string
       }
     };
-  
+
     const onQuantityChange = (e: ChangeEvent<HTMLInputElement>) => {
       const newQuantity = parseInt(e.target.value, 10) || 0;
       setValue(newQuantity);
-  
+
       // Update the quantity and recalculate the cost
       tableMeta?.updateData(row.index, "quantaty", newQuantity);
       const productId = row.getValue("productId");
-      const selectedProduct = products.find((product) => product.id === productId);
-  
+      const selectedProduct = products.find(
+        (product) => product.id === productId
+      );
+
       if (selectedProduct) {
+        // Check if there is a discount for the selected product
+        const currentDiscounts = discounts.find(
+          (discount) => discount.requiredProductId === selectedProduct.id
+        );
+
+        if (
+          currentDiscounts?.discountType === "MULTI_BUY" &&
+          selectedProduct.id === currentDiscounts.requiredProductId
+        ) {
+          const requiredQuantity = currentDiscounts.requiredQuantity;
+    
+          const offerProductId = currentDiscounts.productId;
+          if (newQuantity >= requiredQuantity) {
+            const offerProduct = products.find((product) => product.id === offerProductId);
+    
+            if (offerProduct) {
+              // Check if the free offer product is already in the table
+              const isOfferProductAdded = data.some(
+                (row) => row.productId === offerProduct.id && row.cost === 0
+              );
+
+              if (!isOfferProductAdded) {
+                // Add the free offer product to the table
+                const newRow: IBasket = {
+                  productId: offerProduct.id,
+                  quantaty: 1, // Free product quantity is 1
+                  cost: 0, // Free product has no cost
+                };
+    
+              setData((prevData) => [...prevData, newRow]);
+            }
+          }
+          }
+          else {
+            // Remove the free offer product if the condition is no longer met
+            setData((prevData) =>
+              prevData.filter((row) => row.productId !== offerProductId || row.cost !== 0)
+            );
+          }
+        }
         const cost = (selectedProduct.price * newQuantity).toFixed(2); // Ensure 2 decimal places
         tableMeta?.updateData(row.index, "cost", parseFloat(cost)); // do parsFloat becayse toFixed convert to string
       }
     };
-  
+
     return columnMeta?.type === "select" ? (
       <select onChange={onSelectChange} value={value}>
         {columnMeta?.options?.map((option: IProduct) => (
@@ -196,8 +246,9 @@ const Home = () => {
   };
 
   const checkout = () => {
+    setIsChekout(true);
     const totalCost = data.reduce((sum, row) => sum + row.cost, 0).toFixed(2);
-    alert(`Total cost: $${totalCost}`); //testing
+    //alert(`Total cost: $${totalCost}`); //testing
   };
 
   return (
@@ -242,6 +293,14 @@ const Home = () => {
           </tbody>
         </table>
       </div>
+      {isChekout && (
+        <CheckOut
+          selectedProducts={data}
+          discounts={discounts}
+          customer={customer}
+          onCancel={() => setIsChekout(false)}
+        />
+      )}
     </>
   );
 };

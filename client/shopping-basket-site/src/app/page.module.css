@@ -188,7 +188,8 @@ a.secondary {
 }
 
 .addButton,
-.checkoutButton {
+.checkoutButton,
+.cancelButton {
   margin: 15px 15px 15px 0;
   padding: 10px 20px;
   background-color: #f2f2f2;
@@ -198,7 +199,8 @@ a.secondary {
   cursor: pointer;
 }
 
-.addButton:hover {
+.addButton:hover,
+.cancelButton:hover {
   background-color: #ccc;
 }
 
