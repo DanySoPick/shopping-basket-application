@@ -43,8 +43,8 @@ Installing docker is straightforward, follow this steps.
     
 ```bash
     mysql -u root -p
-    create user 'user'@'%' identified by 'pass';
-    grant all privileges on *.* to 'user'@'%' with grant option;
+    create user 'user1'@'%' identified by 'pass';
+    grant all privileges on *.* to 'user1'@'%' with grant option;
     flush privileges;
 ```
 
@@ -70,3 +70,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Server
 
 Just build the project and run.
+
+### NOTE
+
+If required update connection string with the appropriate information. Current user set is _user1_
+
+`"DefaultConnection": "Server=localhost;Database=localdevDB;user=user1;password=pass"`
