@@ -26,9 +26,11 @@ Installing docker is straightforward, follow this steps.
 ## DataBase
 
 1. Using MySQL WorkBenck, access the database _localdevDB_
-2. Run script `install_data.sql` at `shopping-basket-application\docker`
+2. Run script `install_data.sql` from `shopping-basket-application\docker`
 
-#### NOTE
+### Note
+
+ The server uses the user _user1_ as default.
  
  If required create new user to access:
 
@@ -71,7 +73,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Just build the project and run.
 
-### NOTE
+### Note
 
 If required update connection string with the appropriate information. Current user set is _user1_
 
